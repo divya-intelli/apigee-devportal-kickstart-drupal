@@ -48,7 +48,7 @@ jobs:
       with:
         coverage: "none"
         php-version: "${{ matrix.php-version }}"
-        tools: composer:v2.2
+        tools: composer:2.2
         extensions: dom, curl, libxml, mbstring, zip, pdo, mysql, pdo_mysql, bcmath, gd, exif, iconv, opcache, imagick
 
     - name: Checkout Drupal core
