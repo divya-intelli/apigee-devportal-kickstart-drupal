@@ -1,7 +1,7 @@
 name: Apigee Developer Portal Kickstart
 type: profile
 description: 'A fast demo and starting point for Apigee Developer Portals.'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 
 # Optional: Declare your installation profile as a distribution
 # This will make the installer auto-select this installation profile.
@@ -20,7 +20,7 @@ install:
 - history
 - block
 - breakpoint
-- ckeditor
+- ckeditor5
 - color
 - config
 - comment
@@ -57,9 +57,7 @@ install:
 - admin_toolbar
 - admin_toolbar_links_access_filter
 - admin_toolbar_tools
-- adminimal_admin_toolbar
 - apigee_edge
-- apigee_api_catalog
 - apigee_kickstart_customizer
 - apigee_kickstart_enhancement
 - better_exposed_filters
