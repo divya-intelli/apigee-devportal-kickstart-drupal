@@ -26,7 +26,12 @@
     "drupal/paragraphs": "^1.6",
     "drupal/pathauto": "^1.6",
     "drupal/radix": "^4.11",
-    "drupal/components": "^2.1"
+    "drupal/components": "^2.1",
+    "drupal/color": "^1.0",
+    "drupal/quickedit": "^1.0",
+    "drupal/rdf": "^2.1",
+    "drupal/bartik": "^1.0",
+    "drupal/seven": "^1.0"
   },
   "require-dev": {
     "drupal/core-dev": "^9.4",
