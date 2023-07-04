@@ -10,7 +10,7 @@ core_version_requirement: ^8 || ^9 || ^10
 distribution:
  name: Apigee Developer Portal Kickstart
  install:
-   theme: seven
+   theme: claro
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed
@@ -78,3 +78,4 @@ themes:
 - apigee_kickstart
 - bartik
 - seven
+- claro
