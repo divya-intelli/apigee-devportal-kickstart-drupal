@@ -7146,7 +7146,8 @@ button.bg-lighter:focus {
   .sticky-top {
     position: sticky;
     top: 0;
-    z-index: 1020;
+    height: 8.04% !important;
+    /* z-index: 1020; */
   }
 }
 

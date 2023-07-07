@@ -9,4 +9,4 @@ form:
     - core/jquery
     - core/drupal
     - core/jquery.once
-    - core/jquery.farbtastic
+    - color/jquery.farbtastic
