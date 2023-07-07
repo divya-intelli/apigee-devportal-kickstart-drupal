@@ -7146,7 +7146,6 @@ button.bg-lighter:focus {
   .sticky-top {
     position: sticky;
     top: 0;
-    height: 8.04% !important;
     /* z-index: 1020; */
   }
 }
@@ -13108,4 +13107,8 @@ div.forum__add {
 }
 .user--full .user__user-picture img {
   border-radius: 4px;
+}
+
+.navbar .form-inline .form-actions {
+  display: none !important;
 }
