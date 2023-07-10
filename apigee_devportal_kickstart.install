@@ -653,3 +653,51 @@ function apigee_devportal_kickstart_update_9001() {
   }
 }
 
+
+/**
+ * Update for drupal 10.
+ */
+function apigee_devportal_kickstart_update_9002() {
+  \Drupal::service('theme_installer')->install(['claro']);
+  \Drupal::theme()->setActiveTheme(\Drupal::service('theme.initialization')->initTheme('claro'));
+  $config = \Drupal::service('config.factory')->getEditable('system.theme');
+  $config->set('admin', 'claro')->save();
+  \Drupal::service('theme_installer')->uninstall(['seven']);
+
+
+  $configToImport = [
+    'pathauto.pattern.landing',
+    'pathauto.pattern.content',
+  ];
+  foreach($configToImport as $configName) {
+    $config = \Drupal::configFactory()->getEditable($configName);     
+    $visibility_array = $config->get('selection_criteria');
+    foreach($visibility_array as $key=>$val) {
+      if ($val['id'] === 'node_type') {
+        $visibility_array[$key]['id'] = 'entity_bundle:node';
+      }
+    }
+  $config->set('selection_criteria', $visibility_array)
+    ->save();
+  }
+
+  $configToImport = [
+    'block.block.apigee_kickstart_cta_article',
+    'block.block.apigee_kickstart_cta_developer_account',
+  ];
+  foreach($configToImport as $configName) {
+    $config = \Drupal::configFactory()->getEditable($configName);     
+    $visibility_array = $config->get('visibility');
+    $visibility_array['node_type']['id'] = 'entity_bundle:node'; 
+    $config->set('visibility', $visibility_array)
+      ->save();
+  }
+
+}
+
+/**
+ * Expose API Type and other changes to enhance the API listing view.
+ */
+function apigee_devportal_kickstart_update_9003() {
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/home')->save();
+}
