@@ -297,6 +297,8 @@ function apigee_devportal_kickstart_install() {
     'link' => ['uri' => 'internal:/forum'],
     'weight' => 3,
   ])->save();
+  
+
 }
 
 /**
@@ -693,11 +695,4 @@ function apigee_devportal_kickstart_update_9002() {
       ->save();
   }
 
-}
-
-/**
- * Expose API Type and other changes to enhance the API listing view.
- */
-function apigee_devportal_kickstart_update_9003() {
-  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/home')->save();
 }

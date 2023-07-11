@@ -21,7 +21,6 @@ install:
 - block
 - breakpoint
 - ckeditor5
-- color
 - config
 - comment
 - contextual
@@ -76,6 +75,5 @@ install:
 # Note that this will not set any theme as the default theme.
 themes:
 - apigee_kickstart
-- bartik
-- seven
 - claro
+- olivero
