@@ -660,12 +660,15 @@ function apigee_devportal_kickstart_update_9001() {
  * Update for drupal 10.
  */
 function apigee_devportal_kickstart_update_9002() {
+  // Install admin theme and frontend theme.
   \Drupal::service('theme_installer')->install(['claro']);
-  \Drupal::theme()->setActiveTheme(\Drupal::service('theme.initialization')->initTheme('claro'));
+  \Drupal::service('theme_installer')->install(['olivero']);
+  // Set the admin theme as claro.
   $config = \Drupal::service('config.factory')->getEditable('system.theme');
   $config->set('admin', 'claro')->save();
-  \Drupal::service('theme_installer')->uninstall(['seven']);
-
+  // Uninstall deprecated theme and module
+  \Drupal::service('theme_installer')->uninstall(['seven', 'bartik']);
+  \Drupal::service('module_installer')->uninstall(['ckeditor', 'hal', 'color']);
 
   $configToImport = [
     'pathauto.pattern.landing',

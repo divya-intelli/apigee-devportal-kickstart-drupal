@@ -42,7 +42,7 @@ libraries-extend:
   apigee_m10n/prepaid_balance:
     - apigee_kickstart/monetization.add-credit
 
-ckeditor_stylesheets:
+ckeditor5_stylesheets:
   - assets/css/apigee-kickstart.style.css
 
 components:
