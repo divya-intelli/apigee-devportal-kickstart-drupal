@@ -35,7 +35,7 @@ default:
       value: true
   path:
     -
-      alias: /api/18
+      alias: /api/21
       langcode: en
       pathauto: 0
   body:
