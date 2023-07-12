@@ -40,10 +40,6 @@
     "phpmetrics/phpmetrics": "^2.5",
     "phpstan/phpstan": "^1.5"
   },
-  "conflict": {
-    "drupal/pathauto": "<1.6",
-    "drupal/apigee_m10n": "<1.7"
-  },
   "config": {
     "sort-packages": true
   },
