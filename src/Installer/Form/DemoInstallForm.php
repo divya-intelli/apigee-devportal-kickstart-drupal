@@ -117,9 +117,9 @@ class DemoInstallForm extends FormBase {
       $this->moduleInstaller->install(['apigee_kickstart_content']);
 
       // Set the front page to node 1.
-      $this->configFactory->getEditable('system.site')
-        ->set('page.front', '/node/41')
-        ->save();
+      // $this->configFactory->getEditable('system.site')
+      //   ->set('page.front', '/home')
+      //   ->save();
     }
   }
 
