@@ -1,8 +1,11 @@
 // Base scaffolding for Bootstrap & Apigee Kickstart
 // -----------------------------------------------------------------------------
 @import "~bootstrap/scss/functions";
-@import "../base/variables";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 @import "../base/functions";
+@import "../base/variables";
 @import "../base/mixins";
+
+// Helpers
+@import "~bootstrap/scss/helpers";

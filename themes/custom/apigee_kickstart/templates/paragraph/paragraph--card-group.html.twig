@@ -25,11 +25,12 @@
     {% block content %}
       <div class="container">
         {{ content.field_title }}
-        <div class="card-deck">
-          {{ content|without('field_title', 'field_buttons') }}
-        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {{ content|without('field_title', 'field_buttons') }}
+          </div>
         {{ content.field_buttons}}
       </div>
     {% endblock %}
   </div>
 {% endblock paragraph %}
+
